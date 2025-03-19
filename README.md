@@ -46,7 +46,7 @@ TF-IDF vectorization (max 3000 features) converts text into numerical features, 
 80/20 train-test split (random_state=42) ensures consistent results.
 Metrics: accuracy, precision, recall, F1-score assess performance on spam (1) and ham (0) classes.
 
-**Results**
+## Results
 
 **Dataset:**
 
@@ -68,7 +68,7 @@ Accuracy: 0.9794
       spam (1)    0.99      0.85      0.91       150
   accuracy                            0.98      1115
   
-**Insights**
+## Insights
 
 **Model Comparison:** SVM outperforms Naive Bayes (97.94% vs. 97.31% accuracy), with a 4% higher spam recall (0.85 vs. 0.81), crucial for minimizing missed spam.
 
