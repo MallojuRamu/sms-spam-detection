@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
-
+from sklearn.metrics import classification_report, accuracy_score
 nltk.download('punkt')
 nltk.download('punkt_tab')
 nltk.download('stopwords')
@@ -26,7 +26,6 @@ def preprocess_text(text):
 
 data['clean_text'] = data['text'].apply(preprocess_text)
 
-# Convert labels to binary
 data['label'] = data['label'].map({'spam': 1, 'ham': 0})
 
 
@@ -46,3 +45,15 @@ svm_model = SVC(kernel='linear')
 svm_model.fit(X_train, y_train)
 
 print("Models trained: Naive Bayes and SVM")
+
+
+nb_pred = nb_model.predict(X_test)
+svm_pred = svm_model.predict(X_test)
+
+print("Naive Bayes Results:")
+print(f"Accuracy: {accuracy_score(y_test, nb_pred):.4f}")
+print(classification_report(y_test, nb_pred))
+
+print("SVM Results:")
+print(f"Accuracy: {accuracy_score(y_test, svm_pred):.4f}")
+print(classification_report(y_test, svm_pred))
