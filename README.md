@@ -48,7 +48,7 @@ Metrics: accuracy, precision, recall, F1-score assess performance on spam (1) an
 
 **Results**
 
-**Dataset: **
+**Dataset:**
 
 5574 SMS messages (4825 ham, 747 spam).
 
