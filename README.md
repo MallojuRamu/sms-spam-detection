@@ -78,7 +78,7 @@ Accuracy: 0.9794
 
 **Challenges:** Dataset imbalance (87% ham) favors ham detection; future work could explore oversampling (e.g., SMOTE) for spam.
 
-##Repository Contents
+## Repository Contents
 
 **smsdetection.py:** Core script with preprocessing, training, and evaluation.
 
