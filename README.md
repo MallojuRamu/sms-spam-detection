@@ -28,14 +28,14 @@ python smsdetection.py
 
 Output includes data preprocessing confirmation, model training status, and evaluation metrics.
 
-**Implementation Details**
+## Implementation Details
 
 **Preprocessing:**
 
 Text is lowercased, stripped of punctuation and numbers, tokenized with NLTK, and stopwords are removed.
 TF-IDF vectorization (max 3000 features) converts text into numerical features, optimizing for sparsity and relevance.
 
-**Models:**
+## Models
 
 **Multinomial Naive Bayes:** A lightweight, probabilistic classifier ideal for text, leveraging word frequency independence.
 
